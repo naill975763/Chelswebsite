@@ -1,226 +1,226 @@
 :root {
-	--font1: "Lucida Console", Monospace;
-	--font2: "Monaco", Monospace;
-	--color1: #000000;
-	--color2: #111111;
-	--color3: #dddddd;
-	--color4: #ffffff;
-	--time1: 3.5s;
-	--time2: 3s;
-	--time3: 2s;
-	--time4: 1s;
+  --font1: "Lucida Console", Monospace;
+  --font2: "Monaco", Monospace;
+  --color1: #000000;
+  --color2: #111111;
+  --color3: #dddddd;
+  --color4: #ffffff;
+  --time1: 3.5s;
+  --time2: 3s;
+  --time3: 2s;
+  --time4: 1s;
 }
 
 body {
-	cursor: default;
-	margin: 0;
+  cursor: default;
+  margin: 0;
 
-	background-color: var(--color3);
-    animation-name: BodyAnim;
-    animation-duration: var(--time3);
-    animation-iteration-count: 1;
-	background-color: var(--color1);
+  background-color: var(--color3);
+  animation-name: BodyAnim;
+  animation-duration: var(--time3);
+  animation-iteration-count: 1;
+  background-color: var(--color1);
 }
 
 @keyframes BodyAnim {
-	0% {
-		background-color: var(--color3);
-	}
-	100% {
-		background-color: var(--color1);
-	}
+  0% {
+    background-color: var(--color3);
+  }
+  100% {
+    background-color: var(--color1);
+  }
 }
 
 #line {
-	font-family: var(--font1);
-    font-weight: bold;
-	font-size: 130%;
+  font-family: var(--font1);
+  font-weight: bold;
+  font-size: 130%;
 
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 
-    position: absolute;
-    left: 15px;
-    top: 2%;
-	
-	color: var(--color1);
-    animation-name: LineAnim;
-    animation-duration: var(--time3);
-    animation-iteration-count: 1;
-	color: var(--color3);
+  position: absolute;
+  left: 15px;
+  top: 2%;
+  
+  color: var(--color1);
+  animation-name: LineAnim;
+  animation-duration: var(--time3);
+  animation-iteration-count: 1;
+  color: var(--color3);
 }
 
 @keyframes LineAnim {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color3);
-	}
+  0% {
+    color: var(--color1);
+  }
+  100% {
+    color: var(--color3);
+  }
 }
 
 .top h1{
-	font-family: var(--font1);
-	font-size: 56px;
-	text-align: center;
-	
-	color: var(--color1);
-    animation-name: HeadAnim;
-    animation-duration: var(--time1);
-    animation-iteration-count: 1;
-	color: var(--color4);
+  font-family: var(--font1);
+  font-size: 56px;
+  text-align: center;
+  
+  color: var(--color1);
+  animation-name: HeadAnim;
+  animation-duration: var(--time1);
+  animation-iteration-count: 1;
+  color: var(--color4);
 }
 
 @keyframes HeadAnim {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color4);
-	}
+  0% {
+    color: var(--color1);
+  }
+  100% {
+    color: var(--color4);
+  }
 }
 
 .middle p{
-	font-family: var(--font2);
-    font-weight: bold;
-	font-size: 18px;
-	padding-left: 7%;
-	
-	color: var(--color1);
-    animation-name: AbzAnim;
-    animation-duration: var(--time2);
-    animation-iteration-count: 1;
-	color: var(--color3);
-	
-	transition: all .3s;
+  font-family: var(--font2);
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 7%;
+  
+  color: var(--color1);
+  animation-name: AbzAnim;
+  animation-duration: var(--time2);
+  animation-iteration-count: 1;
+  color: var(--color3);
+  
+  transition: all .3s;
 }
 
 @keyframes AbzAnim {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color3);
-	}
+  0% {
+    color: var(--color1);
+  }
+  100% {
+    color: var(--color3);
+  }
 }
 
 .middle span{
-	font-family: var(--font2);
-    font-weight: bold;
-	font-size: 16px;
-	
-	padding-left: 7%;
-	display: none;
-	
-	color: var(--color4);
-    animation-name: SpanAnim;
-    animation-duration: var(--time3);
-    animation-iteration-count: 1;
-	color: var(--color2);
-	
-	transition: all .1s;
+  font-family: var(--font2);
+  font-weight: bold;
+  font-size: 16px;
+  
+  padding-left: 7%;
+  display: none;
+  
+  color: var(--color4);
+  animation-name: SpanAnim;
+  animation-duration: var(--time3);
+  animation-iteration-count: 1;
+  color: var(--color2);
+  
+  transition: all .1s;
 }
 
 @keyframes SpanAnim {
-	0% {
-		color: var(--color4);
-	}
-	100% {
-		color: var(--color2);
-	}
+  0% {
+    color: var(--color4);
+  }
+  100% {
+    color: var(--color2);
+  }
 }
 
 .middle div:hover p{
-	color: var(--color4);
-	padding-left: 5%;
-	margin: 10px;
+  color: var(--color4);
+  padding-left: 5%;
+  margin: 10px;
 
-	font-size: 22px;
+  font-size: 22px;
 }
 
 .middle div:hover span{
-	padding-left: 8%;
-	color: var(--color4);
-	display: inline;
-	
-    animation-name: Exit;
-    animation-duration: var(--time4);
-    animation-iteration-count: 1;
+  padding-left: 8%;
+  color: var(--color4);
+  display: inline;
+  
+  animation-name: Exit;
+  animation-duration: var(--time4);
+  animation-iteration-count: 1;
 }
 
 @keyframes Exit {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color4);
-	}
+  0% {
+    color: var(--color1);
+  }
+  100% {
+    color: var(--color4);
+  }
 }
 
 .bottom {
-    position: fixed;
-	padding: 25px;
-	width: 98%;
-	bottom: 0;
-    left: 0;
+  position: fixed;
+  padding: 25px;
+  width: 98%;
+  bottom: 0;
+  left: 0;
 }
 
 .bottom span{
-	font-family: var(--font2);
-    font-weight: bold;
-	font-size: 20px;
-	
-	transition: all .1s;
+  font-family: var(--font2);
+  font-weight: bold;
+  font-size: 20px;
+  
+  transition: all .1s;
 }
 
 .bottom .bs1{
-	color: var(--color1);
-    animation-name: Bs1Anim;
-    animation-duration: var(--time2);
-    animation-iteration-count: 1;
-	color: var(--color4);
+  color: var(--color1);
+  animation-name: Bs1Anim;
+  animation-duration: var(--time2);
+  animation-iteration-count: 1;
+  color: var(--color4);
 }
 
 @keyframes Bs1Anim {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color4);
-	}
+  0% {
+    color: var(--color1);
+  }
+  100% {
+    color: var(--color4);
+  }
 }
 
 .bottom .bs2{
-	color: var(--color3);
-    animation-name: Bs2Anim;
-    animation-duration: var(--time4);
-    animation-iteration-count: 1;
-	color: var(--color1);
+  color: var(--color3);
+  animation-name: Bs2Anim;
+  animation-duration: var(--time4);
+  animation-iteration-count: 1;
+  color: var(--color1);
 }
 
 @keyframes Bs2Anim {
-	0% {
-		color: var(--color3);
-	}
-	100% {
-		color: var(--color1);
-	}
+  0% {
+    color: var(--color3);
+  }
+  100% {
+    color: var(--color1);
+  }
 }
 
 .bottom:hover .bs2{
-    animation-name: Blink;
-    animation-duration: var(--time4);
-    animation-iteration-count: infinite;
+  animation-name: Blink;
+  animation-duration: var(--time4);
+  animation-iteration-count: infinite;
 }
 
 @keyframes Blink {
-	0% {
-		color: var(--color1);
-	}
-	50% {
-		color: var(--color4);
-	}
-	100% {
-		color: var(--color1);
-	}
+  0% {
+    color: var(--color1);
+  }
+  50% {
+    color: var(--color4);
+  }
+  100% {
+    color: var(--color1);
+  }
 }
