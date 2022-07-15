@@ -15,16 +15,16 @@ var title = [
 ];
 
 function rand_text() {
-	let a = title.length;
-	let b = Math.floor(Math.random()*10000);
-	let c = b%a;
-	return title[c];
+  let a = title.length;
+  let b = Math.floor(Math.random()*10000);
+  let c = b%a;
+  return title[c];
 }
 
 function line_text() {
-	let text = "";
-	let x = Math.floor(height/20)/2-2;
-	for (let i = 0; i < x; i++) {
+  let text = "";
+  let x = Math.floor(height/20)/2-2;
+  for (let i = 0; i < x; i++) {
     text += "# ";
   } return text;
 }
@@ -32,13 +32,13 @@ function line_text() {
 document.title = rand_text();
 
 Vue.createApp({
-	data(){
-		return {
-			symbols: line_text(height)
-		}
-	}, 
+  data(){
+    return {
+      symbols: line_text(height)
+    }
+  }, 
 
-	mounted() {
+  mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
     })
