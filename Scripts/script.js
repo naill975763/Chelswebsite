@@ -1,26 +1,56 @@
+var height = window.innerHeight;
+var title = [
+  "Чел с дискорда",
+  "НоуНейм",
+  "_Son#7558///",
+  "Сон...",
+  "Son#7558",
+  "_Son#7558///",
+  "Нн с дикорда",
+  "Просто чел",
+  "_Son#7558///",
+  "Кто-то...",
+  "Сайт нн",
+  "_Son#7558///",
+];
+
 function rand_text() {
-	let text = "Пусто!";
-	let x = Math.floor(Math.random()*5)+1;
-	
-	if (x == 1) {
-		text = "Чел с дискорда";
-	} else if (x == 2) {
-		text = "НоуНейм";
-	} else if (x == 3) {
-		text = "Сон...";
-	} else if (x == 4) {
-		text = "Son#7558";
-	} else if (x == 5) {
-		text = "Чебуреки";
-	} return text;
+	let a = title.length;
+	let b = Math.floor(Math.random()*10000);
+	let c = b%a;
+	return title[c];
 }
 
-const ti = {
-  data() {
-    return {
-      text: rand_text()
+function line_text() {
+	let text = "";
+	let x = Math.floor(height/20)/2-2;
+	for (let i = 0; i < x; i++) {
+    text += "# ";
+  } return text;
+}
+
+document.title = rand_text();
+
+Vue.createApp({
+	data(){
+		return {
+			symbols: line_text(height)
+		}
+	}, 
+
+	mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  }, 
+
+  beforeDestroy() { 
+    window.removeEventListener('resize', this.onResize); 
+  }, 
+
+  methods: {  
+    onResize() {
+      height = window.innerHeight
     }
   }
-}
-
-Vue.createApp(ti).mount("#ti");
+}).mount("#line");
