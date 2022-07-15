@@ -13,6 +13,7 @@
 
 body {
 	cursor: default;
+	margin: 0;
 
 	background-color: var(--color3);
     animation-name: BodyAnim;
@@ -30,10 +31,38 @@ body {
 	}
 }
 
+#line {
+	font-family: var(--font1);
+    font-weight: bold;
+	font-size: 130%;
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+    position: absolute;
+    left: 15px;
+    top: 2%;
+	
+	color: var(--color1);
+    animation-name: LineAnim;
+    animation-duration: var(--time3);
+    animation-iteration-count: 1;
+	color: var(--color3);
+}
+
+@keyframes LineAnim {
+	0% {
+		color: var(--color1);
+	}
+	100% {
+		color: var(--color3);
+	}
+}
+
 .top h1{
 	font-family: var(--font1);
-	padding-left: 30px;
 	font-size: 56px;
+	text-align: center;
 	
 	color: var(--color1);
     animation-name: HeadAnim;
@@ -53,9 +82,9 @@ body {
 
 .middle p{
 	font-family: var(--font2);
-	padding-left: 25px;
     font-weight: bold;
-	font-size: 16px;
+	font-size: 18px;
+	padding-left: 7%;
 	
 	color: var(--color1);
     animation-name: AbzAnim;
@@ -77,10 +106,10 @@ body {
 
 .middle span{
 	font-family: var(--font2);
-	padding-left: 40px;
     font-weight: bold;
 	font-size: 16px;
 	
+	padding-left: 7%;
 	display: none;
 	
 	color: var(--color4);
@@ -101,10 +130,37 @@ body {
 	}
 }
 
+.middle div:hover p{
+	color: var(--color4);
+	padding-left: 5%;
+	margin: 10px;
+
+	font-size: 22px;
+}
+
+.middle div:hover span{
+	padding-left: 8%;
+	color: var(--color4);
+	display: inline;
+	
+    animation-name: Exit;
+    animation-duration: var(--time4);
+    animation-iteration-count: 1;
+}
+
+@keyframes Exit {
+	0% {
+		color: var(--color1);
+	}
+	100% {
+		color: var(--color4);
+	}
+}
+
 .bottom {
     position: fixed;
 	padding: 25px;
-	width: 100%;
+	width: 98%;
 	bottom: 0;
     left: 0;
 }
@@ -137,7 +193,7 @@ body {
 .bottom .bs2{
 	color: var(--color3);
     animation-name: Bs2Anim;
-    animation-duration: var(--time3);
+    animation-duration: var(--time4);
     animation-iteration-count: 1;
 	color: var(--color1);
 }
@@ -148,30 +204,6 @@ body {
 	}
 	100% {
 		color: var(--color1);
-	}
-}
-
-.middle div:hover p{
-	color: var(--color4);
-	padding-left: 28px;
-	font-size: 22px;
-}
-
-.middle div:hover span{
-	color: var(--color4);
-	display: inline;
-	
-    animation-name: Exit;
-    animation-duration: var(--time4);
-    animation-iteration-count: 1;
-}
-
-@keyframes Exit {
-	0% {
-		color: var(--color1);
-	}
-	100% {
-		color: var(--color4);
 	}
 }
 
